@@ -1,0 +1,28 @@
+{
+  "name": "custom-mdc-web",
+  "version": "1.0.0",
+  "description": "My custom MDC Web.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "author": "John Chase",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RatJuggler/custom-mdc-web.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^1.1.11",
+    "material-components-web": "^0.37.1",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.0.3",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
