@@ -1,4 +1,5 @@
 {
+  "title": "My Custom MDC Web",
   "name": "custom-mdc-web",
   "version": "1.0.0",
   "description": "My custom MDC Web.",
@@ -25,10 +26,10 @@
     "extract-loader": "^3.1.0",
     "file-loader": "^1.1.11",
     "material-components-web": "^1.0.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "webpack": "^3.12.0",
-    "webpack-dev-server": "^2.11.3"
+    "webpack-dev-server": "^3.1.11"
   }
 }
