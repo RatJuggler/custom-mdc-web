@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'eval-cheap-module-source-map',
 
-  entry: ['./scss/app.scss', './js/app.js'],
+  entry: ['./src/scss/app.scss', './src/js/app.js'],
 
   devServer: {
     port: 8080,
@@ -13,7 +13,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './html/template.html',
+      template: './src/html/template.html',
       inject: true,
       chunks: ['index'],
       filename: 'index.html'

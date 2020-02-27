@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "build": "npm run clean && mkdirp build && webpack --progress --colors",
-    "clean": "del-cli build/** build"
+    "build": "npm run clean && mkdirp dist && webpack --progress --colors",
+    "clean": "del-cli dist/** dist"
   },
   "author": "John Chase",
   "license": "MIT",
