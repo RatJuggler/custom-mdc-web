@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "build": "npm run clean && mkdirp dist && webpack --progress --colors",
+    "build": "npm run clean && mkdirp dist && webpack --progress --colors --mode production",
     "clean": "del-cli dist/** dist"
   },
   "author": "John Chase",
@@ -17,7 +17,7 @@
     "url": "https://github.com/RatJuggler/custom-mdc-web.git"
   },
   "devDependencies": {
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.7.4",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
@@ -31,7 +31,6 @@
     "node-sass": "^4.12.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
-    "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
