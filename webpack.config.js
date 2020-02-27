@@ -1,10 +1,29 @@
 const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devtool: 'eval-cheap-module-source-map',
+
   entry: ['./scss/app.scss', './js/app.js'],
-  output: {
-    filename: './build/bundle.js',
+
+  devServer: {
+    port: 8080,
+    writeToDisk: false
   },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './html/template.html',
+      inject: true,
+      chunks: ['index'],
+      filename: 'index.html'
+    })
+  ],
+
+  output: {
+    filename: 'bundle.js',
+  },
+
   module: {
     rules: [
       {
@@ -13,7 +32,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './build/bundle.css',
+              name: 'bundle.css',
             },
           },
           { loader: 'extract-loader' },
