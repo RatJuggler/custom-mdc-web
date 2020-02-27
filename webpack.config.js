@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -40,7 +39,8 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-               plugins: () => [autoprefixer()],
+              ident: 'postcss',
+              plugins: [require('autoprefixer')()],
             },
           },
           {
