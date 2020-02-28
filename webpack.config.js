@@ -1,9 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   devtool: 'eval-cheap-module-source-map',
 
-  entry: ['./src/scss/app.scss', './src/js/app.js'],
+  entry: {
+    index: './src/js/app.js'
+  },
 
   devServer: {
     port: 8080,
@@ -13,29 +16,27 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/html/template.html',
-      inject: true,
+      inject: 'body',
       chunks: ['index'],
       filename: 'index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
   ],
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
 
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'bundle.css',
-            },
-          },
-          { loader: 'extract-loader' },
-          { loader: 'css-loader' },
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', },
           {
             loader: 'postcss-loader',
             options: {
