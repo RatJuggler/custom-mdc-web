@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'eval-cheap-module-source-map',
 
   entry: {
-    index: './src/js/app.js'
+    index: ['./src/scss/app.scss', './src/js/app.js'],
   },
 
   devServer: {
