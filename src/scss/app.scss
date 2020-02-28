@@ -1,6 +1,6 @@
-@import "@material/button/mdc-button";
+@import "~@material/button/mdc-button";
 
 .foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
+  @include mdc-button-ink-color(darksalmon);  // teal
+  @include mdc-states(darksalmon);  // teal
 }
