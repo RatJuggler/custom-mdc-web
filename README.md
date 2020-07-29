@@ -1,6 +1,5 @@
 # custom-mdc-web
 
-![GitHub](https://img.shields.io/github/license/RatJuggler/custom-mdc-web)
 [![David](https://david-dm.org/RatJuggler/custom-mdc-web.svg)](https://david-dm.org/RatJuggler/custom-mdc-web)
 ![GitHub](https://img.shields.io/github/package-json/v/RatJuggler/custom-mdc-web)
 
